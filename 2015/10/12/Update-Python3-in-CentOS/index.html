@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>在CentOS里安装Python3 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="安装环境 yum install gcc yum install zlib-devel yum install make yum install readline-devel   下载python版本 wget http://www.python.org/ftp/python/3.4.3/Python-3.4.3.tg">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在CentOS里安装Python3">
+<meta property="og:url" content="http://yoursite.com/2015/10/12/Update-Python3-in-CentOS/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="安装环境 yum install gcc yum install zlib-devel yum install make yum install readline-devel   下载python版本 wget http://www.python.org/ftp/python/3.4.3/Python-3.4.3.tgz 解压缩、编译和安装 tar -zxvf Python-3.4.0.tgz">
+<meta property="og:updated_time" content="2017-05-26T12:27:59.950Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="在CentOS里安装Python3">
+<meta name="twitter:description" content="安装环境 yum install gcc yum install zlib-devel yum install make yum install readline-devel   下载python版本 wget http://www.python.org/ftp/python/3.4.3/Python-3.4.3.tgz 解压缩、编译和安装 tar -zxvf Python-3.4.0.tgz">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Update-Python3-in-CentOS" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/10/12/Update-Python3-in-CentOS/" class="article-date">
+  <time datetime="2015-10-11T16:00:00.000Z" itemprop="datePublished">2015-10-12</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/jekyll-update/">jekyll update</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      在CentOS里安装Python3
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ol>
+<li>安装环境<br> yum install gcc<br> yum install zlib-devel<br> yum install make<br> yum install readline-devel  </li>
+<li>下载python版本<br> wget <a href="http://www.python.org/ftp/python/3.4.3/Python-3.4.3.tgz" target="_blank" rel="noopener">http://www.python.org/ftp/python/3.4.3/Python-3.4.3.tgz</a></li>
+<li>解压缩、编译和安装<br> tar -zxvf Python-3.4.0.tgz<br> cd Python-3.4.0<br> ./configure –prefix=/opt/python3<br> make all<br> make install<br> 清除之前编译的可执行文件及配置文件。<br> make clean<br> 清除所有生成的文件<br> make distclean</li>
+<li>查看安装的新版本信息<br> /opt/python3/bin/python3 -V<br> Python 3.4.0<br>由此看出编译安装的新版本python生效了</li>
+<li><p>做个软连接到当前用户的bin目录<br>此时，新版本的python没有覆盖原来的版本，先将原来的python重命名<br> mv /usr/bin/python  /usr/bin/python_old<br>重新建立超链接<br> ln -s /opt/python3/bin/python3 /usr/bin/python3<br>再次打开python则显示新版本<br> python</p>
+<p> Python 3.4.3 (default, Oct 12 2015, 21:31:59)<br> [GCC 4.4.7 20120313 (Red Hat 4.4.7-16)] on linux<br> Type “help”, “copyright”, “credits” or “license” for more information. </p>
+</li>
+<li>升级安装好新版本python以后，默认依然是python2.6<br> vi /usr/bin/yum<br>将文件头部的#!/usr/bin/python修改为 #!/opt/python3/bin/python3或#!/usr/bin/python3即可。  </li>
+</ol>
+<h3 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h3><h4 id="问题一："><a href="#问题一：" class="headerlink" title="问题一："></a>问题一：</h4><p>python3命令进入到交互界面，结果发现，退格键，方向键等好多键都不能正常使用，  </p>
+<h5 id="解决办法："><a href="#解决办法：" class="headerlink" title="解决办法："></a>解决办法：</h5><p>安装readline-devel修复解决  </p>
+<h4 id="问题二："><a href="#问题二：" class="headerlink" title="问题二："></a>问题二：</h4><pre><code>yum  
+File &quot;/usr/bin/yum&quot;, line 30  
+except KeyboardInterrupt, e:   
+                         ^  
+SyntaxError: invalid syntax  
+</code></pre><h5 id="原因："><a href="#原因：" class="headerlink" title="原因："></a>原因：</h5><p>这是因为yum采用python作为命令解释器，这可以从/usr/bin/yum文件中第一行#!/usr/bin/python发现。而python版本之间兼容性不太好，使得2.X版本与3.X版本之间存在语法不一致问题。当系统将python升级到3.X后，出现语法解释错误。  </p>
+<h5 id="解决办法：-1"><a href="#解决办法：-1" class="headerlink" title="解决办法："></a>解决办法：</h5><p>很简单，一是升级yum，一是修改yum的解释器为旧版本python2.6（如果你没有采用覆盖升级的话）。<br>升级yum的作法就不详述了。修改yum的解释器为旧版本python2.6：<br>    $ vi /usr/bin/yum<br>将第一行”#!/usr/bin/python” 改为 “#!/usr/bin/python_old”即可。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/10/12/Update-Python3-in-CentOS/" data-id="cjagd2fsf000hic5utexalcdf" class="article-share-link">Partager</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/07/24/BOR-POR-and-PUC/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Récent</strong>
+      <div class="article-nav-title">
+        
+          对BOR，POR和PUC的理解
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/10/07/Python3-Tutorial-MindMap/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Ancien</strong>
+      <div class="article-nav-title">Python3教程思维导图</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Catégories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/jekyll-update/">jekyll update</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/reprint/">reprint</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">September 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/04/">April 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/09/">September 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/08/">August 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/07/">July 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/11/">November 2010</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Articles récents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/11/26/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2016/11/28/PodCasts-on-Android/">Android手机收听播客的方法</a>
+          </li>
+        
+          <li>
+            <a href="/2016/08/06/Ten-Layers-of-MCU-Programming/">【转载】单片机程序设计的十层功力,你练到哪一层了？</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/28/IO-Operation/">I/O操作（初始化和处理）</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/24/BOR-POR-and-PUC/">对BOR，POR和PUC的理解</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 John Doe<br>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

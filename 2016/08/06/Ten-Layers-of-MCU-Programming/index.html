@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>【转载】单片机程序设计的十层功力,你练到哪一层了？ | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="第一层 我来了第二层 真的打呀第三层 并肩作战，时间，说爱你不容易第四层 状态，你在哪里第五层 时间，还是时间第六层 丰富你的视界第七层 我们说好的第八层 别争了，让我来分配吧第九层 穿着操作系统去裸奔第十层 无招胜有招    第一层，我来了。处在这一层的典型是可以用C语言写简单的逻辑控制，如闪烁LED，简单数码管显示">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【转载】单片机程序设计的十层功力,你练到哪一层了？">
+<meta property="og:url" content="http://yoursite.com/2016/08/06/Ten-Layers-of-MCU-Programming/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="第一层 我来了第二层 真的打呀第三层 并肩作战，时间，说爱你不容易第四层 状态，你在哪里第五层 时间，还是时间第六层 丰富你的视界第七层 我们说好的第八层 别争了，让我来分配吧第九层 穿着操作系统去裸奔第十层 无招胜有招    第一层，我来了。处在这一层的典型是可以用C语言写简单的逻辑控制，如闪烁LED，简单数码管显示，简单外围模块驱动实验。一般对单片机感兴趣，经常动手实践的人，半年左右，">
+<meta property="og:image" content="http://yoursite.com/pic/2016/Overview-RPi-netboot.jpg">
+<meta property="og:updated_time" content="2017-05-26T12:27:59.958Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="【转载】单片机程序设计的十层功力,你练到哪一层了？">
+<meta name="twitter:description" content="第一层 我来了第二层 真的打呀第三层 并肩作战，时间，说爱你不容易第四层 状态，你在哪里第五层 时间，还是时间第六层 丰富你的视界第七层 我们说好的第八层 别争了，让我来分配吧第九层 穿着操作系统去裸奔第十层 无招胜有招    第一层，我来了。处在这一层的典型是可以用C语言写简单的逻辑控制，如闪烁LED，简单数码管显示，简单外围模块驱动实验。一般对单片机感兴趣，经常动手实践的人，半年左右，">
+<meta name="twitter:image" content="http://yoursite.com/pic/2016/Overview-RPi-netboot.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Ten-Layers-of-MCU-Programming" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/08/06/Ten-Layers-of-MCU-Programming/" class="article-date">
+  <time datetime="2016-08-05T16:00:00.000Z" itemprop="datePublished">2016-08-06</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/jekyll-update/">jekyll update</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      【转载】单片机程序设计的十层功力,你练到哪一层了？
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="/pic/2016/Overview-RPi-netboot.jpg" alt="Overview-RPi-netboot">  </p>
+<blockquote>
+<p>第一层 我来了<br>第二层 真的打呀<br>第三层 并肩作战，时间，说爱你不容易<br>第四层 状态，你在哪里<br>第五层 时间，还是时间<br>第六层 丰富你的视界<br>第七层 我们说好的<br>第八层 别争了，让我来分配吧<br>第九层 穿着操作系统去裸奔<br>第十层 无招胜有招  </p>
+</blockquote>
+<h3 id="第一层，我来了。"><a href="#第一层，我来了。" class="headerlink" title="第一层，我来了。"></a>第一层，我来了。</h3><p>处在这一层的典型是可以用C语言写简单的逻辑控制，如闪烁LED，简单数码管显示，简单外围模块驱动实验。一般对单片机感兴趣，经常动手实践的人，半年左右，可以练到此地步(针对没有接触过单片机的人而言)。此层最典型的示例就是，扫描按键时候，检测按下——延时20ms –再次检测按下—-返回键值或等待释放。如果你是这样做的，或者正在这样做，毫无悬念，应该处于这个级别。对于95%的电类专业学生来说，毕业时候，远远低于这个级别，剩下的5%则依次分布在各层上。这也是为什么学单片机的人成千上万，而会用的人寥寥无几的原因。  </p>
+<h3 id="第二层-真的打呀。"><a href="#第二层-真的打呀。" class="headerlink" title="第二层 真的打呀。"></a>第二层 真的打呀。</h3><p>步入这一层的典型标志就是开始思考自己所写的程序是否能够有一点实用价值。譬如应用在实际工程项目中。在这一层，应该开始思考如何让程序结构简单模块化，如何合理的利用CPU的时间。我曾经写过这一层的一点简单教程。对付这一层应该是绰绰有余了。 </p>
+<h3 id="第三层-并肩作战，时间，说爱你不容易。"><a href="#第三层-并肩作战，时间，说爱你不容易。" class="headerlink" title="第三层 并肩作战，时间，说爱你不容易。"></a>第三层 并肩作战，时间，说爱你不容易。</h3><p>这一层是建立在第二层的基础上面。从第二层跨越到这一层，需要很多代码行的积累。在这一层，你对系统中的各个模块应该能够很好的区分。同时对于时间的应用安排更加合理。在这一层，同时也应该考虑时间驱动的设计模式。如何让CPU更有效率的利用起来，需要长时间的积累，并非看，想就可以弄明白，而是不断的实践。  </p>
+<h3 id="第四层-状态，你在哪里。"><a href="#第四层-状态，你在哪里。" class="headerlink" title="第四层 状态，你在哪里。"></a>第四层 状态，你在哪里。</h3><p>这一层同样建立在第三层基础之上。掌握了以上三层，只要基本不涉及复杂算法的程序，可以组织小规模的程序的编写了。在这个时候，如何有效区分系统中的状态，利用状态来进行迁移，变得尤为重要。有人说通用结构好。反而我认为，针对特定应用来规划更优秀。对于单片机程序而言，几乎没有能够一摸一样的项目。而对于可移植性而言，能够做到函数级别的复用，已经非常难能可贵了。  </p>
+<h3 id="第五层-时间，还是时间。"><a href="#第五层-时间，还是时间。" class="headerlink" title="第五层 时间，还是时间。"></a>第五层 时间，还是时间。</h3><p>时间具备精确性、模糊性、可丢失性，这三个特性是从应用时间的不同角度来描述的。精确性应用在精确地定时、计时的场合，它是个强实时的概念，比如测量频率。模糊性应用在需要稳定计时的场合，它追求的是长时间的稳定性，而忽略定时每刻发生的时刻，比如显示日期时间。可丢失性是非重要的计时，它只要求阶段性时间符合而不要求一定时间到达就必定发生，比如LED闪烁的时间控制、倒计时执行某些功能性操作，通常是使用时间系统的时间发生标志。同时在这一层如果能够将WINDOWS程序设计中的一些优秀思想利用起来，则非常好。能够领悟到这一层的，在我所知道的前辈高手中少之又少。  </p>
+<h3 id="第六层-丰富你的视界。"><a href="#第六层-丰富你的视界。" class="headerlink" title="第六层 丰富你的视界。"></a>第六层 丰富你的视界。</h3><p>这一层是我自己安排的位置。相比前面几层而言，我觉得它更为重要。写单片机程序，什么最痛苦，当然是做界面最痛苦。一个好的产品，离不开好的UI。在这里，你需要设计简单易用同时好看的人机接口非常不容易。而且对于简单单色点阵液晶的操作，能够做到显示界面非常好看，同时程序结构清晰，非常不容易。很多人都说，设计界面，就像绣花似的。太痛苦了。我一直在折腾，现在还没有一个定论，到底是通用的结构好，还是针对特定用途还设计好。按照我在第四层中的说法，这里应该根据特定用途来规划更好些。  </p>
+<h3 id="第七层-我们说好的。"><a href="#第七层-我们说好的。" class="headerlink" title="第七层 我们说好的。"></a>第七层 我们说好的。</h3><p>这一层主要是各种各样的协议的熟悉。非常重要，因为这个是和实际联系最为紧密的。工业现场的各种传感器，采集仪表如何将采集到的数据有效的发回给上位机。两者能够可靠的通信，软件层面上都离不开它们。  </p>
+<h3 id="第八层-别争了，让我来分配吧。"><a href="#第八层-别争了，让我来分配吧。" class="headerlink" title="第八层 别争了，让我来分配吧。"></a>第八层 别争了，让我来分配吧。</h3><p>还在为该如何分配CPU的时间嘛。其实不用苦恼。千万不要什么东西都重新自己造。你想开车，不用自己造轮子吧，买一个就可以了。前人其实对这些问题都研究过非常多了。因此操作系统应运而生。有人说，如果学会了在操作系统上面写程序，将绝不想再回到以前的那种编程方式，听起来非常诱人。  </p>
+<h3 id="第九层-穿着操作系统去裸奔。"><a href="#第九层-穿着操作系统去裸奔。" class="headerlink" title="第九层 穿着操作系统去裸奔。"></a>第九层 穿着操作系统去裸奔。</h3><p>啥，都用上操作系统了，还想着裸奔。太花心了吧。非也。这里是将前面几层所提及到的一些思想与第八层融汇贯通。可以说，在这一层，需要对前面的每一层都非常的熟悉。并经过很多实际项目的磨练方能有所体会。  </p>
+<h3 id="第十层-无招胜有招。"><a href="#第十层-无招胜有招。" class="headerlink" title="第十层 无招胜有招。"></a>第十层 无招胜有招。</h3><p>能够达到这一层的应该算的上是屈指可数的高手之一了。在这一层上，除了前面九层的熟练应用之外。更牛的人应该是可以设计操作系统，设计gui之类的。要达到这一点，需要非常多的基础知识，以及大量的专业知识以及实践，再加以10—20年的实战经验，以及一颗不沉寂的心。在这里，无招胜有招，非常熟悉MCU的特性，能够利用这种各样的技巧。这样的高人，在国内数一数二的电子论坛里也不在少数。  </p>
+<p>单片机的本质只是一个工具。因此，更为重要的是模拟电子，数字电子以及其它基础的专业课程。很多人都说大学学的东西没有用，其实这个才是最大的谬论。万丈高楼平地起，没有这些专业基础课程的支撑。以后工作中进步非常缓慢。道理很简单。学的东西都是建立在以前的基础课程上面的。如果一个连三极管的放大电路都不会分析的人，我不相信他可以设计出优秀的电路来。因此作为一个合格的电子工程师，除了掌握广泛的专业知识技能外，时刻不能够停止学习的脚步。</p>
+<p>Link: <a href="http://www.21ic.com/jichuzhishi/mcu/questions/2015-02-02/614962.html" target="_blank" rel="noopener">http://www.21ic.com/jichuzhishi/mcu/questions/2015-02-02/614962.html</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/08/06/Ten-Layers-of-MCU-Programming/" data-id="cjagd2fu5000wic5uoh5zvd92" class="article-share-link">Partager</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/11/28/PodCasts-on-Android/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Récent</strong>
+      <div class="article-nav-title">
+        
+          Android手机收听播客的方法
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/07/28/IO-Operation/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Ancien</strong>
+      <div class="article-nav-title">I/O操作（初始化和处理）</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Catégories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/jekyll-update/">jekyll update</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/reprint/">reprint</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">September 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/04/">April 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/09/">September 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/08/">August 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/07/">July 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/11/">November 2010</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Articles récents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/11/26/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2016/11/28/PodCasts-on-Android/">Android手机收听播客的方法</a>
+          </li>
+        
+          <li>
+            <a href="/2016/08/06/Ten-Layers-of-MCU-Programming/">【转载】单片机程序设计的十层功力,你练到哪一层了？</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/28/IO-Operation/">I/O操作（初始化和处理）</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/24/BOR-POR-and-PUC/">对BOR，POR和PUC的理解</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 John Doe<br>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
