@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>HEXO | WangZhenjiang&#39; blog</title>
+  <title>在CentOS里安装Python3 | WangZhenjiang&#39; blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troublesho">
+  <meta name="description" content="安装环境 yum install gcc yum install zlib-devel yum install make yum install readline-devel   下载python版本 wget http://www.python.org/ftp/python/3.4.3/Python-3.4.3.tg">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HEXO">
-<meta property="og:url" content="http://wangzhenjiang.com/2017/11/26/hello-world/index.html">
+<meta property="og:title" content="在CentOS里安装Python3">
+<meta property="og:url" content="http://wangzhenjiang.com/2015/10/12/Update-Python3-in-CentOS/index.html">
 <meta property="og:site_name" content="WangZhenjiang&#39; blog">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
-<meta property="og:updated_time" content="2017-12-03T12:42:34.803Z">
+<meta property="og:description" content="安装环境 yum install gcc yum install zlib-devel yum install make yum install readline-devel   下载python版本 wget http://www.python.org/ftp/python/3.4.3/Python-3.4.3.tgz 解压缩、编译和安装 tar -zxvf Python-3.4.0.tgz">
+<meta property="og:updated_time" content="2017-05-26T12:27:59.950Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HEXO">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="在CentOS里安装Python3">
+<meta name="twitter:description" content="安装环境 yum install gcc yum install zlib-devel yum install make yum install readline-devel   下载python版本 wget http://www.python.org/ftp/python/3.4.3/Python-3.4.3.tgz 解压缩、编译和安装 tar -zxvf Python-3.4.0.tgz">
   
     <link rel="alternate" href="/atom.xml" title="WangZhenjiang&#39; blog" type="application/atom+xml">
   
@@ -63,12 +63,16 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Update-Python3-in-CentOS" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/11/26/hello-world/" class="article-date">
-  <time datetime="2017-11-26T05:13:49.651Z" itemprop="datePublished">2017-11-26</time>
+    <a href="/2015/10/12/Update-Python3-in-CentOS/" class="article-date">
+  <time datetime="2015-10-11T16:00:00.000Z" itemprop="datePublished">2015-10-12</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/jekyll-update/">jekyll update</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -77,7 +81,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      HEXO
+      在CentOS里安装Python3
     </h1>
   
 
@@ -85,20 +89,30 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <ol>
+<li>安装环境<br> yum install gcc<br> yum install zlib-devel<br> yum install make<br> yum install readline-devel  </li>
+<li>下载python版本<br> wget <a href="http://www.python.org/ftp/python/3.4.3/Python-3.4.3.tgz" target="_blank" rel="noopener">http://www.python.org/ftp/python/3.4.3/Python-3.4.3.tgz</a></li>
+<li>解压缩、编译和安装<br> tar -zxvf Python-3.4.0.tgz<br> cd Python-3.4.0<br> ./configure –prefix=/opt/python3<br> make all<br> make install<br> 清除之前编译的可执行文件及配置文件。<br> make clean<br> 清除所有生成的文件<br> make distclean</li>
+<li>查看安装的新版本信息<br> /opt/python3/bin/python3 -V<br> Python 3.4.0<br>由此看出编译安装的新版本python生效了</li>
+<li><p>做个软连接到当前用户的bin目录<br>此时，新版本的python没有覆盖原来的版本，先将原来的python重命名<br> mv /usr/bin/python  /usr/bin/python_old<br>重新建立超链接<br> ln -s /opt/python3/bin/python3 /usr/bin/python3<br>再次打开python则显示新版本<br> python</p>
+<p> Python 3.4.3 (default, Oct 12 2015, 21:31:59)<br> [GCC 4.4.7 20120313 (Red Hat 4.4.7-16)] on linux<br> Type “help”, “copyright”, “credits” or “license” for more information. </p>
+</li>
+<li>升级安装好新版本python以后，默认依然是python2.6<br> vi /usr/bin/yum<br>将文件头部的#!/usr/bin/python修改为 #!/opt/python3/bin/python3或#!/usr/bin/python3即可。  </li>
+</ol>
+<h3 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h3><h4 id="问题一："><a href="#问题一：" class="headerlink" title="问题一："></a>问题一：</h4><p>python3命令进入到交互界面，结果发现，退格键，方向键等好多键都不能正常使用，  </p>
+<h5 id="解决办法："><a href="#解决办法：" class="headerlink" title="解决办法："></a>解决办法：</h5><p>安装readline-devel修复解决  </p>
+<h4 id="问题二："><a href="#问题二：" class="headerlink" title="问题二："></a>问题二：</h4><pre><code>yum  
+File &quot;/usr/bin/yum&quot;, line 30  
+except KeyboardInterrupt, e:   
+                         ^  
+SyntaxError: invalid syntax  
+</code></pre><h5 id="原因："><a href="#原因：" class="headerlink" title="原因："></a>原因：</h5><p>这是因为yum采用python作为命令解释器，这可以从/usr/bin/yum文件中第一行#!/usr/bin/python发现。而python版本之间兼容性不太好，使得2.X版本与3.X版本之间存在语法不一致问题。当系统将python升级到3.X后，出现语法解释错误。  </p>
+<h5 id="解决办法：-1"><a href="#解决办法：-1" class="headerlink" title="解决办法："></a>解决办法：</h5><p>很简单，一是升级yum，一是修改yum的解释器为旧版本python2.6（如果你没有采用覆盖升级的话）。<br>升级yum的作法就不详述了。修改yum的解释器为旧版本python2.6：<br>    $ vi /usr/bin/yum<br>将第一行”#!/usr/bin/python” 改为 “#!/usr/bin/python_old”即可。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://wangzhenjiang.com/2017/11/26/hello-world/" data-id="cjaqslf6000009c5uxfa33ybz" class="article-share-link">Share</a>
+      <a data-url="http://wangzhenjiang.com/2015/10/12/Update-Python3-in-CentOS/" data-id="cjaqt5r41000bl05uz7vtznrq" class="article-share-link">Share</a>
       
       
     </footer>
@@ -107,10 +121,19 @@
     
 <nav id="article-nav">
   
+    <a href="/2016/07/24/BOR-POR-and-PUC/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          对BOR，POR和PUC的理解
+        
+      </div>
+    </a>
   
-    <a href="/2016/11/28/PodCasts-on-Android/" id="article-nav-older" class="article-nav-link-wrap">
+  
+    <a href="/2015/01/08/javascript-trap/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Android手机收听播客的方法</div>
+      <div class="article-nav-title">JavaScript陷阱</div>
     </a>
   
 </nav>
